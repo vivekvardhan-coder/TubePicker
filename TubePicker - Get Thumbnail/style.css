@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    display: grid;
+}
+
+body {
+    background-image: linear-gradient(45deg, #79d7d5, #9413f7);
+    font-family: 'Arial', sans-serif; /* Added font family */
+    color: #ffffff; /* Set default text color */
+}
+
+.logo {
+    margin: 0.5em;
+    max-width: 8vw;
+    max-height: 8vh;
+}
+
+.main {
+    margin: auto;
+    text-align: center;
+    max-width: 90vw;
+    padding: 4em; /* Increased padding for more height */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+h2, h3 {
+    margin-bottom: 1em; /* Spacing below headers */
+    line-height: 1.5; /* Added line height for spacing between lines */
+}
+
+.buttons button {
+    margin: 0.5em;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.buttons button:hover {
+    background-color: #007bff; /* Change button color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+input[name="url"] {
+    border-radius: 5px; /* Rounded corners for input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for input */
+    margin-bottom: 20px;
+}
+
+#fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+}
+
+h4{
+    padding-bottom: 13px;
+}
+
+footer {
+    margin: 1em;
+}
+
+footer img {
+    vertical-align: bottom;
+    transition-duration: 2s;
+    transition-property: transform;
+}
+
+footer img:hover,
+footer a:hover img {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
