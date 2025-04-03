@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubePicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="preview.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="preview.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+       
+    <div class="main fw-light">
+        <label for="url" class="form-label medium text-white">Found an awesome YouTube thumbnail? Grab it instantly!</label>
+        <label for="url" class="form-label medium text-white"><b>TubePicker </b> makes it effortless to extract high-quality YouTube thumbnails. Just paste any video link—including Shorts and embedded videos—and get instant access to different resolutions in seconds. No watermarks, no sign-ups, just pure convenience!</label>
+        <header>
+            <h2 class="display-6 lh-1 text-white"><span><img class="logo" src="preview.png"></span> TubePicker – Extract HD Thumbnails Instantly!</h>
+        </header>
+        <hr>
+        <h4 class="text-white">Paste any YouTube link – we handle Shorts, timestamps, and all the extra stuff!</h4>
+            <input name="url" type="search" id="url" class="form-control fw-light"
+            onfocus="if(this.value == 'https://youtu.be/viW44cUfxCE?si=N0wk3Ek8JNrUC53S') { this.value = ''; }"
+            onblur="if(this.value == '') { this.value = 'https://youtu.be/viW44cUfxCE?si=N0wk3Ek8JNrUC53S'; }"
+            value="https://youtu.be/viW44cUfxCE?si=N0wk3Ek8JNrUC53S" />
+        <div class="buttons">
+            <button class="btn btn-primary fw-light" onclick="dynamicUrl(0)"> Get Thumbnail</button>
+            <button class="btn btn-info fw-light" onclick="dynamicUrl(1)"> Get Max Size Thumbnail</button>
+            <button class="btn btn-success fw-light" onclick="download()">Download</button>
+        </div>
+        <img decoding="async" class="center-fit" id="img" onclick="fullPage()" title="Click to zoom in/out" src="https://img.youtube.com/vi/viW44cUfxCE/maxresdefault.jpg" />
+    </div>
+    <div id="fullpage" title="Click to zoom in/out" onclick="this.style.display='none';"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
